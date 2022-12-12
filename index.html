@@ -31,7 +31,21 @@ $(document).ready(function(){
 			bgColor: '#2ecc71',
 			textColor: '#fff',
           });
-		$("#div1").css('color', 'red');
+		$("#div1").css('color', '#E83B3B');
+    });
+	
+  });
+	
+  $("#garlandButton").click(function(){
+    $.post("https://449.duckdns.org/api/webhook/-ng6gTw9xoBc7AHsFLE2iEpFy", 
+      function(data,status){$.toast({
+            text: "The garland has a red/green heart-throb now.",
+			heading: status,
+			position: 'top-right',
+			bgColor: '#2ecc71',
+			textColor: '#fff',
+          });
+		$("#div1").css('color', '#5ED759');
     });
 	
   });
@@ -58,17 +72,6 @@ $(document).ready(function(){
 		border-color: darkblue;
 	}
 	
-	#statusBox
-	{
-		font-size: 2em;
-		color: #5ED759;
-		margin: 10px;
-		padding: 5px 0px 5px 0px;
-		display: fixed;
-		top: 10px;
-		left: 40px;
-	}
-	
 </style>
 	
 </head>
@@ -81,6 +84,8 @@ $(document).ready(function(){
 <button id="workshopButton" class="button">Change the Workshop Lights</button>
 	
 <button id="houseButton" class="button">Change the House Lights</button>
+	
+<button id="garlandButton" class="button">Change the Garland Lights</button>
 
 </body>
 </html>
