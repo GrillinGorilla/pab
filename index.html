@@ -6,7 +6,7 @@
 $(document).ready(function(){
   $("button").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", function(status){
-      $("#div3").text(status);;
+      alert("Status: " + status);
     });
   });
 });
@@ -19,12 +19,6 @@ $(document).ready(function(){
 </div>
 
 <button>BOOM</button>
-
-<div id="div2">
-    <h4>Logs</h4>
-  <div id="div3"></div>
-</div>
-  
 
 </body>
 </html>
