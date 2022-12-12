@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>	
+<title>449</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="js/jquery.toast.js"></script>	
 <link rel="stylesheet" href="js/jquery.toast.css">
@@ -9,23 +10,32 @@ $(document).ready(function(){
 	
   $("#workshopButton").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
-      function(data,status){document.getElementById("statusBox").innerHTML = status;
-		$("#statusBox").fadeIn('fast').fadeOut(3000);
+      function(data,status){$.toast({
+            text: "The workshop should be flashing blue now.",
+			heading: status,
+			position: 'top-right',
+			bgColor: '#2ecc71',
+			textColor: '#fff',
+          });
+		$("#div1").css('color', 'lightblue');
     });
+	
   });
 	
   $("#houseButton").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-OsI_5KynODhu32-mdAbPwJrs", 
-      function(data,status){document.getElementById("statusBox").innerHTML = status;
-    });
-	$.toast({
-            text : "Status: " + status,
-			heading: 'Top right',
+      function(data,status){$.toast({
+            text: "The house should be flashing colors now.",
+			heading: status,
 			position: 'top-right',
 			bgColor: '#2ecc71',
 			textColor: '#fff',
-          })
+          });
+		$("#div1").css('color', 'red');
+    });
+	
   });
+	
 });
 </script>
 	
@@ -67,8 +77,6 @@ $(document).ready(function(){
 <div id="div1">
     <h1>Change The Lights!</h1>
 </div>
-
-<div id="statusBox"></div>
 	
 <button id="workshopButton" class="button">Change the Workshop Lights</button>
 	
