@@ -7,13 +7,13 @@ $(document).ready(function(){
 	
   $("#workshopButton").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
-      function(data,status){alert("Submitted. Ask Dave if it changed! \nStatus: " + status);
+      function(data,status){document.getElementById("statusBox").innerHTML = status;
     });
   });
 	
   $("#houseButton").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-OsI_5KynODhu32-mdAbPwJrs", 
-      function(data,status){alert("Submitted. Ask Dave if it changed! \nStatus: " + status);
+      function(data,status){document.getElementById("statusBox").innerHTML = status;
     });
   });
 });
@@ -22,8 +22,8 @@ $(document).ready(function(){
 <style>
 	body
 	{
-		color: darkblue;
-		background-color: #EAEBEB;
+		color: #D0D0D0;
+		background-color: #686868;
 		text-align: center;
 	}
 	
@@ -34,8 +34,17 @@ $(document).ready(function(){
 		padding: 5px 0px 5px 0px;
 		font-size: 3em;
 		color: darkblue;
+		background-color: #D0D0D0;
+		border-color: darkblue;
 	}
 	
+	#statusBox
+	{
+		font-size: 2em;
+		color: #5ED759;
+		margin: 10px;
+		padding: 5px 0px 5px 0px;
+	}
 	
 </style>
 	
@@ -44,6 +53,7 @@ $(document).ready(function(){
 
 <div id="div1">
     <h1>Change The Lights!</h1>
+	<span id="statusBox"></span>
 </div>
 
 <button id="workshopButton" class="button">Change the Workshop Lights</button>
