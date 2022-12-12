@@ -2,12 +2,15 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/jquery.toast.js"></script>	
+<link rel="stylesheet" href="js/jquery.toast.css">
 <script>
 $(document).ready(function(){
 	
   $("#workshopButton").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
       function(data,status){document.getElementById("statusBox").innerHTML = status;
+		$("#statusBox").fadeIn('fast').fadeOut(3000);
     });
   });
 	
@@ -15,6 +18,13 @@ $(document).ready(function(){
     $.post("https://449.duckdns.org/api/webhook/-OsI_5KynODhu32-mdAbPwJrs", 
       function(data,status){document.getElementById("statusBox").innerHTML = status;
     });
+	$.toast({
+            text : "Status: " + status,
+			heading: 'Top right',
+			position: 'top-right',
+			bgColor: '#2ecc71',
+			textColor: '#fff',
+          })
   });
 });
 </script>
@@ -44,6 +54,9 @@ $(document).ready(function(){
 		color: #5ED759;
 		margin: 10px;
 		padding: 5px 0px 5px 0px;
+		display: fixed;
+		top: 10px;
+		left: 40px;
 	}
 	
 </style>
@@ -53,9 +66,10 @@ $(document).ready(function(){
 
 <div id="div1">
     <h1>Change The Lights!</h1>
-	<span id="statusBox"></span>
 </div>
 
+<div id="statusBox"></div>
+	
 <button id="workshopButton" class="button">Change the Workshop Lights</button>
 	
 <button id="houseButton" class="button">Change the House Lights</button>
