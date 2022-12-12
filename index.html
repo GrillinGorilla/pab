@@ -5,7 +5,8 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3"
+    $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", function(status){
+      alert("Submitted. Ask Dave if it changed!);
     });
   });
 });
