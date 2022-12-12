@@ -4,8 +4,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
+	
+  $("#workshopButton").click(function(){
     $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
+      function(data,status){alert("Submitted. Ask Dave if it changed! \nStatus: " + status);
+    });
+  });
+	
+  $("#houseButton").click(function(){
+    $.post("https://449.duckdns.org/api/webhook/-OsI_5KynODhu32-mdAbPwJrs", 
       function(data,status){alert("Submitted. Ask Dave if it changed! \nStatus: " + status);
     });
   });
@@ -18,7 +25,9 @@ $(document).ready(function(){
     <h2>Change The Lights!</h2>
 </div>
 
-<button>BOOM</button>
+<button id="workshopButton" style="width: 50%; height: 50px; margin: 10px;">Change the Workshop Lights</button>
+	
+<button id="houseButton" style="width: 50%; height: 50px; margin: 10px;">Change the House Lights</button>
 
 </body>
 </html>
