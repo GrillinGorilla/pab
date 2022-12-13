@@ -22,34 +22,6 @@ $(document).ready(function(){
 	
   });
 	
-  $("#houseButton").click(function(){
-    $.post("https://449.duckdns.org/api/webhook/-OsI_5KynODhu32-mdAbPwJrs", 
-      function(data,status){$.toast({
-            text: "The house should be flashing colors now.",
-			heading: status,
-			position: 'top-right',
-			bgColor: '#2ecc71',
-			textColor: '#fff',
-          });
-		$("#div1").css('color', '#E83B3B');
-    });
-	
-  });
-	
-  $("#garlandButton").click(function(){
-    $.post("https://449.duckdns.org/api/webhook/-ng6gTw9xoBc7AHsFLE2iEpFy", 
-      function(data,status){$.toast({
-            text: "The garland has a red/green heart-throb now.",
-			heading: status,
-			position: 'top-right',
-			bgColor: '#2ecc71',
-			textColor: '#fff',
-          });
-		$("#div1").css('color', '#5ED759');
-    });
-	
-  });
-	
 });
 </script>
 	
@@ -82,10 +54,6 @@ $(document).ready(function(){
 </div>
 	
 <button id="workshopButton" class="button">Change the Workshop Lights</button>
-	
-<button id="houseButton" class="button">Change the House Lights</button>
-	
-<button id="garlandButton" class="button">Change the Garland Lights</button>
 
 </body>
 </html>
