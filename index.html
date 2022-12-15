@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>	
-<title>PaB</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="js/jquery.toast.js"></script>	
-<link rel="stylesheet" href="js/jquery.toast.css">
-<script>
-$(document).ready(function(){
-	
-  $("#workshopButton").click(function(){
-    $.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
-      function(data,status){$.toast({
-            text: "The workshop should be flashing blue now.",
-			heading: status,
-			position: 'top-right',
-			bgColor: '#2ecc71',
-			textColor: '#fff',
-          });
-		$("#div1").css('color', 'lightblue');
-    });
-	
-  });
-	
-});
-</script>
-	
-<style>
-	body
-	{
-		color: #D0D0D0;
-		background-color: #686868;
-		text-align: center;
-	}
-	
-	.button
-	{
-		width: 50%; 
-		margin: 10px;
-		padding: 5px 0px 5px 0px;
-		font-size: 3em;
-		color: darkblue;
-		background-color: #D0D0D0;
-		border-color: darkblue;
-	}
-	
-</style>
-	
-</head>
-<body>
+  <head>
+    <title>PaB</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	  
+	<!-- THIS PAGE -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/flow_status.css">
+    <script src="js/js.js"></script>	
+	  
+	<!-- TOAST -->
+    <script src="js/jquery.toast.js"></script>	
+    <link rel="stylesheet" href="css/jquery.toast.css">
+	  
+	<!-- <script src="js/pop_out_nav_menu.js"></script> -->
+    <!-- <link rel="stylesheet" href="css/pop_out_nav_menu.css"> -->
+	 
+  </head>
 
-<div id="div1">
-    <h1>Change The Lights!</h1>
-</div>
-	
-<button id="workshopButton" class="button">Change the Workshop Lights</button>
+  <body>
+    <div id='page_banner'>
+            <!-- <span onclick="openPopOutNavMenu()"> -->
+			<span>
+                <img id="page_logo" src="img/house_in_a_circle.png" alt="My image"/>
+                <span class='page_title' id='page_title_nfdw'>449</span> <span class='page_title' id='page_title_hub'>Lights</span>
+            </span>
+    </div>
+    <div id='page_content_container'>
+    
+      <h3 id="changeTheLightsHeader" class='page_header'>Change the Lights!</h3>
+  
+      <div id='page_content_wrapper'>
+      
+        <div class='light_choice_button' onclick="matrix()">
+          Matrix
+        </div>
+      
+        <div class='light_choice_button' onclick="nwFlash()">
+          NW Flash
+        </div>
+      
+        <div class='light_choice_button' onclick="crazyBees()">
+          Crazy Bees
+        </div>
+      
+        <div class='light_choice_button' onclick="blackHole()">
+          Black Hole
+        </div>
+      
+      </div>
+    </div>
 
-</body>
+  </body>
+
 </html>
