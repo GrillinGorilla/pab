@@ -13,6 +13,20 @@ function matrix()
 		});
 }
 
+function pab()
+{
+	$.post("https://449.duckdns.org/api/webhook/-l30o8wixXfLB7uifsM7FOftS", 
+		  function(data,status){$.toast({
+				text: "Merry Christmas to my team!",
+				heading: status,
+				position: 'top-right',
+				bgColor: '#2ecc71',
+				textColor: '#fff',
+			  });
+			$("#changeTheLightsHeader").css('color', '#E83B3B');
+		});
+}
+
 function nwFlash()
 {
 	$.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
