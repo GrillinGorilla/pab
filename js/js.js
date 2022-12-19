@@ -27,7 +27,7 @@ function nwFlash()
 		});
 }
 
-function crazyBees()
+function spaceships()
 {
 	$.post("https://449.duckdns.org/api/webhook/-fb1hrO4JXKiHZ3XToC0vmtrh", 
 		  function(data,status){$.toast({
