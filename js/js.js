@@ -1,23 +1,9 @@
 
-function matrix()
-{
-	$.post("https://449.duckdns.org/api/webhook/-L1E-tgASTDeOq2N8dkdZ8ToQ", 
-		  function(data,status){$.toast({
-				text: "vvvvvvvvvvvvvvvvvvvvvvvvv",
-				heading: status,
-				position: 'top-right',
-				bgColor: '#2ecc71',
-				textColor: '#fff',
-			  });
-			$("#changeTheLightsHeader").css('color', '#E83B3B');
-		});
-}
-
 function pab()
 {
 	$.post("https://449.duckdns.org/api/webhook/-l30o8wixXfLB7uifsM7FOftS", 
 		  function(data,status){$.toast({
-				text: "Merry Christmas to my team!",
+				text: "PaB 4 Eva!! <3",
 				heading: status,
 				position: 'top-right',
 				bgColor: '#2ecc71',
@@ -27,9 +13,9 @@ function pab()
 		});
 }
 
-function nwFlash()
+function randomMessage()
 {
-	$.post("https://449.duckdns.org/api/webhook/-StMZ6fbdP36UsMaTI29mUZh3", 
+	$.post("https://449.duckdns.org/api/webhook/-hQHv4mvo66R1jTWViBxml6LC", 
 		  function(data,status){$.toast({
 				text: "I wonder what Holly's cats are thinking right now....",
 				heading: status,
@@ -41,30 +27,16 @@ function nwFlash()
 		});
 }
 
-function spaceships()
+function randomPattern()
 {
-	$.post("https://449.duckdns.org/api/webhook/-fb1hrO4JXKiHZ3XToC0vmtrh", 
+	$.post("https://449.duckdns.org/api/webhook/-L1E-tgASTDeOq2N8dkdZ8ToQ", 
 		  function(data,status){$.toast({
-				text: "E-I-E-I-O",
+				text: "Gettin' blinky wit it!",
 				heading: status,
 				position: 'top-right',
 				bgColor: '#2ecc71',
 				textColor: '#fff',
 			  });
 			$("#changeTheLightsHeader").css('color', '#0A959C');
-		});
-}
-
-function blackHole()
-{
-	$.post("https://449.duckdns.org/api/webhook/-hQHv4mvo66R1jTWViBxml6LC", 
-		  function(data,status){$.toast({
-				text: "Beware of Shishir's all-seeing eye",
-				heading: status,
-				position: 'top-right',
-				bgColor: '#2ecc71',
-				textColor: '#fff',
-			  });
-			$("#changeTheLightsHeader").css('color', '#114B1A');
 		});
 }
