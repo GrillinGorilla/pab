@@ -46,3 +46,4 @@ function testing()
 	message=document.getElementById("testingBox").value;
 	$.post("https://449.duckdns.org/api/webhook/-d_yjxAXD9u2eyLN4M0BPV4Na?message=" + message);
 }
+
