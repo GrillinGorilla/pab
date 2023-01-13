@@ -41,9 +41,18 @@ function randomPattern()
 		});
 }
 
-function testing()
+function sendCustomText()
 {
-	message=document.getElementById("testingBox").value;
-	$.post("https://449.duckdns.org/api/webhook/-d_yjxAXD9u2eyLN4M0BPV4Na?message=" + message);
+	message=document.getElementById("customTextBox").value;
+	$.post("https://449.duckdns.org/api/webhook/-d_yjxAXD9u2eyLN4M0BPV4Na?message=" + message, 
+		  function(data,status){$.toast({
+				text: "This message will self-destruct in 5....4....3....2...1.....BOOM!",
+				heading: status,
+				position: 'top-right',
+				bgColor: '#2ecc71',
+				textColor: '#fff',
+			  });
+			$("#changeTheLightsHeader").css('color', '#0A959C');
+		});
 }
 
