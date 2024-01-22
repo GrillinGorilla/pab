@@ -1,9 +1,9 @@
 
-function local404()
+function pab()
 {
 	$.post("https://449.duckdns.org/api/webhook/-l30o8wixXfLB7uifsM7FOftS", 
 		  function(data,status){$.toast({
-				text: "Local404 4 Eva!! <3",
+				text: "PaB 4 Eva!! <3",
 				heading: status,
 				position: 'top-right',
 				bgColor: '#2ecc71',
